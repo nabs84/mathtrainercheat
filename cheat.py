@@ -29,8 +29,9 @@ first = False
 #Lancer x parties :D
 
 while first != True:
-    for i in range(20):
+    for i in range(30):
         try:
+            sleep(1)
             a = int(driver.find_element_by_class_name("a").text.replace(" ", ""))
             b = int(driver.find_element_by_class_name("b").text.replace(" ", "")) #récuperer les valeurs A et B
             operator = driver.find_element_by_class_name("operator").text # récuperer l'opperateur
@@ -44,7 +45,6 @@ while first != True:
             else:
                 resultat = int(float(a) / float(b)) # faire le calcule
             
-            sleep(0.5)
             driver.find_element_by_tag_name('body').send_keys(resultat) # envoyer le resultat
         except:
             try:
