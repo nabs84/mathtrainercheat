@@ -15,9 +15,9 @@ login = driver.find_element_by_class_name("signin-btn").click() # cliquer sur lo
 sleep(1)
 driver.find_elements_by_class_name("firebaseui-idp-button")[3].click() # cliquer sur email
 sleep(1.5)
-driver.find_element_by_class_name("mdl-textfield__input").send_keys("xopoi@yopmail.com", Keys.ENTER) # entrer son email
+driver.find_element_by_class_name("mdl-textfield__input").send_keys("exemple@mail.com", Keys.ENTER) # entrer son email
 sleep(1)
-driver.find_elements_by_class_name("mdl-textfield__input")[1].send_keys("xopoi12345", Keys.ENTER) # entrer son mdp
+driver.find_elements_by_class_name("mdl-textfield__input")[1].send_keys("password123", Keys.ENTER) # entrer son mdp
 sleep(2)
 
 
@@ -31,7 +31,7 @@ first = False
 while first != True:
     for i in range(30):
         try:
-            sleep(1)
+            sleep(randint(4,6))
             a = int(driver.find_element_by_class_name("a").text.replace(" ", ""))
             b = int(driver.find_element_by_class_name("b").text.replace(" ", "")) #récuperer les valeurs A et B
             operator = driver.find_element_by_class_name("operator").text # récuperer l'opperateur
