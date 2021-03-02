@@ -45,8 +45,8 @@ while first != True:
             
 #afficher les calculs:
 #           print(f"{a} {operator} {b} = {resultat}")
+            sleep(randint(2.5, 4))
             driver.find_element_by_tag_name('body').send_keys(resultat) # envoyer le resultat
-            sleep(randint(0.5, 1.5))
         except:
             try:
                 sleep(1)
